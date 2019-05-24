@@ -1,0 +1,529 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, sailAI">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,130.711029,-311.719788,220.711029,-261.719788,0.000000,"init"};
+item1[] = {"wait_for_target",4,218,200.869736,629.978271,290.869720,679.978271,0.000000,"wait for target"};
+item2[] = {"_",2,250,76.358131,678.558472,166.358154,728.558472,0.000000,""};
+item3[] = {"__1",4,218,-62.503845,769.596069,27.496155,819.596069,0.000000,""};
+item4[] = {"_",4,218,197.752640,725.424500,287.752655,775.424500,0.000000,""};
+item5[] = {"__1",1,250,198.827118,864.021179,288.827148,914.021179,0.000000,""};
+item6[] = {"no_target",4,218,-56.202271,630.102356,33.797729,680.102356,0.000000,"no target"};
+item7[] = {"__2",2,250,77.328751,587.815979,167.328751,637.816040,0.000000,""};
+item8[] = {"handle_received",4,218,130.155548,-223.565659,220.155548,-173.565659,0.000000,"handle received"};
+item9[] = {"wait_for_target",2,250,129.850128,-132.511566,219.850143,-82.511566,0.000000,"wait for target"};
+item10[] = {"target_",4,218,-12.759163,-122.800537,77.240845,-72.800537,0.000000,"target?"};
+item11[] = {"get_path",2,250,-143.564240,-114.957802,-53.564209,-64.957794,0.000000,"get path"};
+item12[] = {"a_star_finished",4,218,-278.359802,-111.427460,-188.359833,-61.427460,0.000000,"a star" \n "finished"};
+item13[] = {"path_empty_split",2,250,-396.339111,57.362717,-306.339111,107.362717,0.000000,"path empty" \n "split"};
+item14[] = {"not_empty",4,218,-474.195282,-49.850494,-384.195313,0.149506,0.000000,"not empty"};
+item15[] = {"new__current_tar",2,250,-543.362305,60.925903,-453.362305,110.925903,0.000000,"new " \n "current target"};
+item16[] = {"path_empty",4,218,-126.200974,-10.758728,-36.200974,39.241272,0.000000,"path empty"};
+item17[] = {"ctarget_is__far",4,218,-546.146301,186.192505,-456.146301,236.192490,0.000000,"ctarget is " \n "far away"};
+item18[] = {"get_small_path",2,250,-537.702271,292.961395,-447.702209,342.961426,0.000000,"get small path"};
+item19[] = {"ctarget_is_close",4,218,-382.284393,185.691559,-292.284363,235.691559,0.000000,"ctarget is close"};
+item20[] = {"__3",2,250,26.052643,-16.325958,116.052658,33.674042,0.000000,""};
+item21[] = {"_",4,218,135.742004,-14.882690,225.742004,35.117310,0.000000,""};
+item22[] = {"small_path_empty",2,250,-362.320251,494.504089,-272.320251,544.504089,0.000000,"small path empty" \n "split"};
+item23[] = {"not_empty",4,218,-612.151062,499.127136,-522.151062,549.127136,0.000000,"not empty"};
+item24[] = {"new__current_tar_1",2,250,-616.959290,653.160950,-526.959473,703.160950,0.000000,"new " \n "current target"};
+item25[] = {"ctarget_is__far",4,218,-617.644958,776.527588,-527.645081,826.527466,0.000000,"ctarget is " \n "far away"};
+item26[] = {"drive",2,250,-366.705994,775.433838,-276.705994,825.433838,0.000000,"drive"};
+item27[] = {"updatedrive",4,218,-373.544250,907.711914,-283.544250,957.711792,0.000000,"updatedrive"};
+item28[] = {"ctarget_is_close",4,218,-366.579041,661.001282,-276.578979,711.001282,0.000000,"ctarget is close"};
+item29[] = {"a_star_finished",4,218,-537.282471,388.468567,-447.282562,438.468567,0.000000,"a star" \n "finished"};
+item30[] = {"path_empty",4,218,-157.972656,314.582794,-67.972641,364.582794,0.000000,"path empty"};
+item31[] = {"smth_went_wrong",4,218,-158.958130,511.134521,-68.958008,561.134521,0.000000,"smth went wrong"};
+link0[] = {0,8};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,4};
+link4[] = {2,6};
+link5[] = {3,2};
+link6[] = {4,5};
+link7[] = {6,7};
+link8[] = {7,1};
+link9[] = {8,9};
+link10[] = {9,10};
+link11[] = {10,11};
+link12[] = {11,12};
+link13[] = {12,13};
+link14[] = {13,14};
+link15[] = {13,16};
+link16[] = {14,15};
+link17[] = {15,17};
+link18[] = {15,19};
+link19[] = {16,20};
+link20[] = {17,18};
+link21[] = {18,29};
+link22[] = {19,13};
+link23[] = {20,21};
+link24[] = {21,9};
+link25[] = {22,19};
+link26[] = {22,23};
+link27[] = {22,30};
+link28[] = {23,24};
+link29[] = {24,25};
+link30[] = {24,28};
+link31[] = {25,26};
+link32[] = {26,27};
+link33[] = {26,28};
+link34[] = {26,31};
+link35[] = {27,26};
+link36[] = {28,22};
+link37[] = {29,22};
+link38[] = {30,13};
+link39[] = {31,18};
+globals[] = {0.000000,0,0,0,0,640,480,1,44,6316128,1,-896.491211,213.750183,1137.289429,62.313129,913,884,1};
+window[] = {2,-1,-1,-1,-1,785,26,1412,26,3,931};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "sailAI";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_ship = param [0,objnull,[objnull]];" \n
+                         "_sleeptime = .5;" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "handle_received">*/
+                                class handle_received
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="wait_for_target";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""_handle"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "_">*/
+                class _
+                {
+                        name = "_";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_waitunitl = diag_ticktime+_sleeptime;" \n
+                         "" \n
+                         "_ship call BW_sail_fnc_setAllSails;" \n
+                         "" \n
+                         "_pos = _target;" \n
+                         "" \n
+                         "if(typename _target == ""OBJECT"")then{" \n
+                         "	_pos = getposworld _target;" \n
+                         "	_cannons = attachedObjects _ship select {typeOf _x isEqualTo ""1715_exp_brit_6pounder""};" \n
+                         "	_cannons apply {" \n
+                         "		_mPos = (_x worldtoModel _pos);" \n
+                         "		if(_mPos#1>0 && abs(_mPos#0)<4)then{" \n
+                         "			_cannons spawn{" \n
+                         "				{" \n
+                         "					_w = currentweapon _x;" \n
+                         "					if(_x ammo _w>0)then{" \n
+                         "						_x fire _w;" \n
+                         "					};					" \n
+                         "					sleep ((random .2)+.1);" \n
+                         "				} forEach _this;				" \n
+                         "			};			" \n
+                         "			systemchat ""fire!"";" \n
+                         "		};" \n
+                         "	};" \n
+                         "};" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "_mdlspc = (_ship worldToModel _pos)#0;" \n
+                         "_ship animate [""rudder"",_mdlspc/(abs(_mdlspc)+0.0001)];" \n
+                         "_ship animate [""wheel"",_mdlspc/(abs(_mdlspc)+0.0001)];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="__1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"damage _ship isEqualto 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "no_target">*/
+                                class no_target
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="__2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"typeName _target isEqualTo ""OBJECT""&&{(isNull _target)}||typeName _target isEqualTo ""ARRAY""&&{vectorMagnitude _target isEqualto 0}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__1">*/
+                                class __1
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_ticktime>_waitunitl"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__1">*/
+                class __1
+                {
+                        name = "__1";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__2">*/
+                class __2
+                {
+                        name = "__2";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"systemchat ""nothin to doo"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "wait_for_target">*/
+                                class wait_for_target
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"typeName _target isEqualTo ""OBJECT""&&{(!isNull _target)}||typeName _target isEqualTo ""ARRAY""&&{vectorMagnitude _target != 0}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "wait_for_target">*/
+                class wait_for_target
+                {
+                        name = "wait_for_target";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"[_ship,1] call BW_sail_fnc_setAllSails;	//reset sails" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "target_">*/
+                                class target_
+                                {
+                                        itemno = 10;
+                                        priority = 0.000000;
+                                        to="get_path";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""_target"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "get_path">*/
+                class get_path
+                {
+                        name = "get_path";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"_path = nil;" \n
+                         "" \n
+                         "_startpos = (getposasl _ship)vectoradd ((vectordir _ship)vectormultiply 200);" \n
+                         "_aStarHandle = [_startpos,_target,500,_handle,""_path""] spawn BW_sail_fnc_astar;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "a_star_finished">*/
+                                class a_star_finished
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="path_empty_split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _aStarHandle && !isNil ""_path"" && {typeName _path isEqualTo ""ARRAY""}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "path_empty_split">*/
+                class path_empty_split
+                {
+                        name = "path_empty_split";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "path_empty">*/
+                                class path_empty
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="__3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"false && _path isEqualto []"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "not_empty">*/
+                                class not_empty
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="new__current_tar";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_path isEqualto [])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "new__current_tar">*/
+                class new__current_tar
+                {
+                        name = "new__current_tar";
+                        itemno = 15;
+                        init = /*%FSM<STATEINIT""">*/"_cPathTarget = _path call BIS_fnc_arrayPop;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "ctarget_is_close">*/
+                                class ctarget_is_close
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="path_empty_split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _cPathTarget <= 200"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "ctarget_is__far">*/
+                                class ctarget_is__far
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="get_small_path";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _cPathTarget > 200"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "get_small_path">*/
+                class get_small_path
+                {
+                        name = "get_small_path";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"_startpos = (getposasl _ship)vectoradd ((vectordir _ship)vectormultiply 100);" \n
+                         "_aStarHandle = [_startpos,_cPathTarget,100,_handle,""_spath""] spawn BW_sail_fnc_astar;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "a_star_finished">*/
+                                class a_star_finished
+                                {
+                                        itemno = 29;
+                                        priority = 0.000000;
+                                        to="small_path_empty";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"scriptDone _aStarHandle && !isNil ""_spath"" && {typeName _spath isEqualTo ""ARRAY""}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__3">*/
+                class __3
+                {
+                        name = "__3";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"_target = nil;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="wait_for_target";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "small_path_empty">*/
+                class small_path_empty
+                {
+                        name = "small_path_empty";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "not_empty">*/
+                                class not_empty
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="new__current_tar_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_spath isEqualto [])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "path_empty">*/
+                                class path_empty
+                                {
+                                        itemno = 30;
+                                        priority = 0.000000;
+                                        to="path_empty_split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"false && _path isEqualto []"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "ctarget_is_close">*/
+                                class ctarget_is_close
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="path_empty_split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _cPathTarget <= 200"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "new__current_tar_1">*/
+                class new__current_tar_1
+                {
+                        name = "new__current_tar_1";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/"_csmallPathTarget = _spath call BIS_fnc_arrayPop;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "ctarget_is_close">*/
+                                class ctarget_is_close
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="small_path_empty";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _csmallPathTarget <= 90"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "ctarget_is__far">*/
+                                class ctarget_is__far
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="drive";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _csmallPathTarget > 90"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "drive">*/
+                class drive
+                {
+                        name = "drive";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"_mdlspc = ((_ship worldToModel _csmallPathTarget)#0);" \n
+                         "" \n
+                         "if(_mdlspc<0)then{" \n
+                         "	_mdlspc = -1;" \n
+                         "}else{" \n
+                         "	_mdlspc = 1;" \n
+                         "};" \n
+                         "" \n
+                         "_ship animate [""rudder"",_mdlspc,false];" \n
+                         "_ship animate [""wheel"",_mdlspc];" \n
+                         "" \n
+                         "_ship call BW_sail_fnc_setAllSails;" \n
+                         "" \n
+                         "_waitunitl = time+_sleeptime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "ctarget_is_close">*/
+                                class ctarget_is_close
+                                {
+                                        itemno = 28;
+                                        priority = 0.000000;
+                                        to="small_path_empty";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _csmallPathTarget <= 90"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "smth_went_wrong">*/
+                                class smth_went_wrong
+                                {
+                                        itemno = 31;
+                                        priority = 0.000000;
+                                        to="get_small_path";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_ship distance2d _csmallPathTarget > 300"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "updatedrive">*/
+                                class updatedrive
+                                {
+                                        itemno = 27;
+                                        priority = 0.000000;
+                                        to="drive";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time>_waitunitl"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "__1",
+        };
+};
+/*%FSM</COMPILE>*/
