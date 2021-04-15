@@ -4,10 +4,79 @@ class CfgPatches
 	{
 		units[]={};
 		requiredVersion=1;
-		requiredAddons[]={};
+		requiredAddons[]={
+			"1715_boats",
+			"1715_cat_cay",
+			"1715_clothing",
+			"1715_data",
+			"1715_fonts",
+			"1715_frigates",
+			"1715_gear",
+			"1715_high_seas",
+			"1715_Sailing_Manual",
+			"1715_menu_scenes",
+			"1715_missions",
+			"1715_navalweapons",
+			"1715_objects_barrel",
+			"1715_sloops",
+			"1715_sounds",
+			"1715_Units",
+			"1715_weapons",
+			"BW_vector",
+			"BW_adaptive_roadway"
+		};
 		weapons[]={};
 	};
 };
+
+class CfgAmmo
+{
+	class B_762x51_Ball;
+  	class SubmunitionBase;
+	class B_12Gauge_Pellets_Submunition;
+	
+	class 1715_wood_splinter: B_762x51_Ball
+	{
+		airFriction=-0.025;
+		hit=10;
+		deflecting=20;
+		indirectHit=0;
+		indirectHitRange=0;
+		caliber=0.1;
+		cartridge="";
+		visibleFire=5;
+		audibleFire=9;
+		visibleFireTime=5;
+		cost=4;
+		typicalSpeed=100;
+		soundHitBody1[]=
+		{
+			"",
+			1,
+			1
+		};
+		soundHit[]=
+		{
+			"",
+			1,
+			1
+		};
+	};
+
+	class 1715_wood_splinter_spawner_6pound: B_12Gauge_Pellets_Submunition
+	{
+		submunition = "1715_wood_splinter";
+		triggerTime = 0.005;
+		caliber = 11;
+		deleteParentWhenTriggered = true;
+		submunitionConeType[] = {"randomcenter",40};
+		submunitionConeAngle = 120;
+		submunitionInitialOffset[] = {0,0,0.1};
+		submunitionDirectionType = "SubmunitionModelDirection";
+		triggerSpeedCoef = 0.8;
+	};
+};
+
 class CfgFunctions
 {
 	class BW_sail
@@ -18,17 +87,39 @@ class CfgFunctions
 			class init{preInit=1;};
 			class initShip{};
 		};
+		class damageModel
+		{
+			file="\BW_sail\damageModel";
+			class handleSplinters;
+			class addHole;
+		};
 		class action{
 			file="\BW_sail\action";
 			class keyDown{};
 			class keyUp{};
 			class actionHandler{};
-			class externalAction{};
 			class dragAction{};
 			class dropAnchor{};
 			class removePlank{};
 			class applyPlank{};
 			class OnActionKey{};
+			class canWaterBoat{};
+			class waterBoat{};
+			class whereCanLoadBoat{};
+			class loadBoat{};
+			class getBoatPos{};
+			class getShipLight{};
+			class createShipLight{};
+			class deleteShipLight{};
+			class getFlagObj{};
+			class addChangeFlagActions{};
+			class removeChangeFlagActions{};
+			class reloadCannon{};
+			class switchCannonAmmo{};
+			class addAction{};
+			class removeAction{};
+			class changeFlag{};
+			class pump{};
 		};
 		class util{
 			file="\BW_sail\util";
@@ -46,6 +137,11 @@ class CfgFunctions
 			class fireBroadside{};
 			class addWaitUntilTime{};
 			class waitUntilTime{};
+			class parseCSV{};
+			class getAttachedObj{};
+			class findExtremeArrayIndex{};
+			class addOrReplaceKey{};
+			class removeKey{};
 		};
 		class AI{
 			file="\BW_sail\ai";
@@ -62,10 +158,17 @@ class CfgFunctions
 			class enterRopeMode{};
 			class exitRopeMode{};
 		};
+		class sail
+		{
+			file="\BW_sail\sail";
+			class simulateSail{};
+			class teleportToHelm{};
+		};
 	};
 };
 class CfgVehicles
 {
+	
 	class Items_base_F;
 	class 1715_sloop_anchor: Items_base_F
 	{
@@ -73,7 +176,8 @@ class CfgVehicles
 		author="Bloodwyn";
 		model="\BW_sail\model\sloop_anchor.p3d";
 		displayName="Sloop Anchor";
-		vehicleClass="Objects";
+		editorcategory = "1715_Objects";
+		editorSubcategory = "1715_Objects";
 		armor=20000;
 		icon="iconObject";
 		mapSize=0.69999999;
@@ -86,12 +190,13 @@ class CfgVehicles
 		author="Bloodwyn";
 		model="\BW_sail\model\Plank_4m_F.p3d";
 		displayName="Plank 4m (PhysiX)";
-		vehicleClass="Objects";
+		editorcategory = "1715_Objects";
+		editorSubcategory = "1715_Objects";
 		armor=20000;
 		icon="iconObject";
 		mapSize=0.69999999;
 		accuracy=0.2;
-		class SailActionsExternal
+		class BW_actions
 		{
 			class remove
 			{
@@ -102,19 +207,6 @@ class CfgVehicles
 				onlyForplayer=0;
 				condition="!isnull BW_cship";
 				statement="_this call BW_sail_fnc_removePlank";
-			};
-		};
-		class UserActions
-		{
-			class sail_action
-			{
-				displayName="";
-				displayNameDefault="";
-				position="";
-				radius=6;
-				condition="[this] call BW_sail_fnc_externalAction;false";
-				statement="hint ""yay""";
-				onlyForplayer=0;
 			};
 		};
 	};
@@ -136,6 +228,6 @@ class CfgMarkers
 	class BW_windIndicator: hd_arrow
 	{
 		name="wind indicator (Angel)";
-		icon="\BW_sail\icon\placeholder.paa";
+		icon="\BW_sail\icon\wind_indicator.paa";
 	};
 };

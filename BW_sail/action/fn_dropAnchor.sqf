@@ -1,19 +1,32 @@
 params[
 	["_ship", BW_anker, [objNull]],
-	["_star", true,[true]]
+	["_star", true,[true]],
+	["_anchPos","",[[],""],3],
+	["_ropePos","",[[],""],3]
 ];
 
 if(_star && (!isnull ((_ship getVariable["anchorobjs",[objNull,objNull,objNull,objNull]])#0)))exitWith{};
 if(!_star && (!isnull ((_ship getVariable["anchorobjs",[objNull,objNull,objNull,objNull]])#2)))exitWith{};
 
-private _anchPos = [-2.8,4.2,-12.6];
-private _ropePos = [-0.88,4.5,-11.5];
-private _dir = -110;
-if(_star)then{
-	_anchPos = [2.8,4.2,-12.6];
-	_ropePos = [0.88,4.5,-11.5];
-	_dir = -_dir;
+if(_anchPos isEqualType "")then{
+	_anchPos = _ship selectionPosition _anchPos;
 };
+
+if(_ropePos isEqualType "")then{
+	_ropePos = _ship selectionPosition _anchPos;
+};
+
+if((_anchPos distance [0,0,0]) < 0.1)then{
+	private _f = [-1,1] select _star;
+	_anchPos = [_f * 2.8,4.2,-12.6];
+};
+
+if((_ropePos distance [0,0,0]) < 0.1)then{
+	private _f = [-1,1] select _star;
+	_ropePos = [_f * 2.8,4.2,-12.6];
+};
+
+private _dir = -110;
 
 private _anch = "1715_sloop_anchor" createVehicle [0,0,0];
 private _anchStartWeight = getMass _anch;

@@ -83,9 +83,9 @@ if(_requiredWeapons isEqualTo [])then{
 				_dir set[2,0];
 				_dir;
 			};
-			private _offsetVec = _pos vectorAdd (_dir vectorMultiply _offset);
+			private _offsetVec = _dir vectorMultiply _offset;
 
-			_can attachto[_ship,_offsetVec];
+			_can attachto[_ship,_offsetVec, (_positions#_x)];
 			_can setVectorDirAndUp [_dir, [0, 0, 1]];
 
 		};

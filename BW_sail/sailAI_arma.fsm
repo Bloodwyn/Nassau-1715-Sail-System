@@ -1,0 +1,228 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, sailAI">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,59.815155,-199.489777,149.815155,-149.489761,0.000000,"init"};
+item1[] = {"init_done",4,218,59.446960,-104.496368,149.446960,-54.496353,0.000000,"init done"};
+item2[] = {"standby",2,250,57.927811,-30.726215,147.927826,19.273788,0.000000,"standby"};
+item3[] = {"dead",4,218,57.374367,51.988388,147.374374,101.988388,0.000000,"dead"};
+item4[] = {"moving",4,218,-214.628754,-106.550087,-124.628777,-56.550087,0.000000,"moving"};
+item5[] = {"end",1,250,57.144394,140.830414,147.144424,190.830414,0.000000,"end"};
+item6[] = {"moving",2,250,-359.989777,-7.555634,-269.989746,42.444366,0.000000,"moving"};
+item7[] = {"reached__destina",4,218,-83.121658,-101.448891,6.878326,-51.448906,0.000000,"reached " \n "destination"};
+item8[] = {"firetime_",4,218,-147.238724,135.114029,-57.238708,185.114044,0.000000,"firetime?"};
+item9[] = {"fire",2,250,-147.209290,15.237213,-57.209290,65.237213,0.000000,"fire"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,4};
+link4[] = {2,8};
+link5[] = {3,5};
+link6[] = {4,6};
+link7[] = {6,4};
+link8[] = {6,7};
+link9[] = {6,8};
+link10[] = {7,2};
+link11[] = {8,9};
+link12[] = {9,4};
+link13[] = {9,7};
+globals[] = {0.000000,0,0,0,0,640,480,1,57,6316128,1,-399.437195,196.786835,252.433716,-253.384003,1042,884,1};
+window[] = {2,-1,-1,-1,-1,837,78,1464,78,3,1060};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "sailAI";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"_ship = param [0,objnull,[objnull]];" \n
+                         "" \n
+                         "_dis2target = 60;" \n
+                         "" \n
+                         "_nextFire = 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "init_done">*/
+                                class init_done
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="standby";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "standby">*/
+                class standby
+                {
+                        name = "standby";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"[_ship,1] call BW_sail_fnc_setallsails;" \n
+                         "" \n
+                         "_ship setVelocity [0,0,0];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "moving">*/
+                                class moving
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="moving";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(expectedDestination _ship)#0 distance _ship > _dis2target && !((expectedDestination _ship)#0 isEqualto [0,0,1e+009])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "firetime_">*/
+                                class firetime_
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="fire";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _nextFire"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="end";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive _ship || isNull _ship"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "end">*/
+                class end
+                {
+                        name = "end";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "moving">*/
+                class moving
+                {
+                        name = "moving";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_ship call BW_sail_fnc_setallsails;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "reached__destina">*/
+                                class reached__destina
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="standby";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(expectedDestination _ship)#0 distance _ship <= _dis2target || ((expectedDestination _ship)#0 isEqualto [0,0,1e+009])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "firetime_">*/
+                                class firetime_
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="fire";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time > _nextFire"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "moving">*/
+                                class moving
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="moving";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(expectedDestination _ship)#0 distance _ship > _dis2target && !((expectedDestination _ship)#0 isEqualto [0,0,1e+009])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "fire">*/
+                class fire
+                {
+                        name = "fire";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"_targets =  _ship targets [true, 200, []];" \n
+                         "" \n
+                         "_targets = _targets apply {" \n
+                         "	_model = _ship worldToModel (getposworld _x);" \n
+                         "	[abs (_model#0),_x,_model#0,_model#1];" \n
+                         "};" \n
+                         "" \n
+                         "" \n
+                         "_targets = _targets select {abs(_x#3) <= 10}; // ships that are on one side" \n
+                         "" \n
+                         "_targets sort true; // sort by x axis" \n
+                         "" \n
+                         "if !(_targets isEqualTo [])then{" \n
+                         "	_td = _targets#0#2;" \n
+                         "	[_ship,_td>0] call BW_sail_fnc_fireBroadside;" \n
+                         "	_nextFire = time + 15;" \n
+                         "}else{" \n
+                         "	_nextFire = time + 1;" \n
+                         "};" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "reached__destina">*/
+                                class reached__destina
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="standby";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(expectedDestination _ship)#0 distance _ship <= _dis2target || ((expectedDestination _ship)#0 isEqualto [0,0,1e+009])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "moving">*/
+                                class moving
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="moving";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(expectedDestination _ship)#0 distance _ship > _dis2target && !((expectedDestination _ship)#0 isEqualto [0,0,1e+009])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "end",
+        };
+};
+/*%FSM</COMPILE>*/

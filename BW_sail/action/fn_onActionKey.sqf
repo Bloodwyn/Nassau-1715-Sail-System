@@ -1,12 +1,11 @@
 if(BW_dragging)exitWith{};
 if(BW_blockAction)exitWith{};
-if!(BW_activeAction isEqualTo [])exitWith{BW_cShip call (BW_activeAction#4);};
-if!(BW_activeExternAction isEqualTo [])exitWith{
+if!(BW_activeAction isEqualTo [])exitWith{
 
-	 _obj = BW_activeExternAction#0;
-	 _position = BW_activeExternAction#1;
-	 _statement = BW_activeExternAction#2;
-	 _drag = BW_activeExternAction#3;
+	 _obj = BW_activeAction#0;
+	 _position = BW_activeAction#1;
+	 _statement = BW_activeAction#2;
+	 _drag = BW_activeAction#3;
 
 	BW_activeExternAction params[
 	 "_obj",

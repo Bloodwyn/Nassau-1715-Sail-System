@@ -16,7 +16,11 @@ private _t = _windFrom - 180;
 
 private _sel = (round(_windFrom/(sail_steps#1))) mod 64;
 
+
 private _config=(configFile >> "cfgvehicles" >> typeOf _ship >> "CfgBWSailSystem");
+private _matNames = getArray(_config>>"matrices");
+private _mats = _matNames apply {missionNamespace getVariable _x;};
+
 (_config call bis_fnc_getCfgSubclasses) apply {
 	_sailc = _config>>_x;
 	_type = getNumber (_sailc>>"type");
@@ -28,7 +32,8 @@ private _config=(configFile >> "cfgvehicles" >> typeOf _ship >> "CfgBWSailSystem
 			private _maxV = -1e39;
 			for "_i" from 0 to 19 step 1 do
 			{
-				_v = tri_sail_traverse # _i # _sel;
+
+				_v = (_mats#0) # _i # _sel;
 				if(_v>_maxV)then{
 					_maxIndex = _i;
 					_maxV = _v;
@@ -38,18 +43,18 @@ private _config=(configFile >> "cfgvehicles" >> typeOf _ship >> "CfgBWSailSystem
 			private _anim = _maxIndex*(sail_steps#0)-1;
 
 			if(_maxV<=0)then{
-				_ship animate [getText(_sailc>>"set"),1];
+				(getArray(_sailc>>"set")) apply {_ship animate [_x,1];};
 			}else{
-				_ship animate [getText(_sailc>>"set"),_set];
+				(getArray(_sailc>>"set")) apply {_ship animate [_x,_set];};
 			};
 			_ship animate [getText(_sailc>>"sideSwing"),_anim];
 		};
 		case 1:
 		{
-			if(jib_sail_traverse#_sel <= 0)then{
-				_ship animate [getText(_sailc>>"set"),1];
+			if((_mats#2)#_sel <= 0)then{
+				(getArray(_sailc>>"set")) apply {_ship animate [_x,1];};
 			}else{
-				_ship animate [getText(_sailc>>"set"),_set];
+				(getArray(_sailc>>"set")) apply {_ship animate [_x,_set];};
 			};
 		};
 		case 2:
@@ -58,7 +63,7 @@ private _config=(configFile >> "cfgvehicles" >> typeOf _ship >> "CfgBWSailSystem
 			private _maxV = -1e39;
 			for "_i" from 0 to 19 step 1 do
 			{
-				_v = quad_sail_traverse # _i # _sel;
+				_v = (_mats#4) # _i # _sel;
 				if(_v>_maxV)then{
 					_maxIndex = _i;
 					_maxV = _v;

@@ -7,56 +7,36 @@ item2[] = {"end",1,250,165.458496,-44.069839,255.458527,5.930115,0.000000,"end"}
 item3[] = {"init_done",4,218,-167.135391,-156.441376,-77.135391,-106.441422,0.000000,"init done"};
 item4[] = {"loop",2,4346,-167.407837,-44.213455,-77.407684,5.786446,0.000000,"loop"};
 item5[] = {"null_or_dead",4,218,3.612991,-44.030239,93.612991,5.969757,0.000000,"null or dead"};
-item6[] = {"type_0",4,218,-838.517517,138.149384,-748.517517,188.149384,0.000000,"type 0"};
-item7[] = {"config",4,218,4.785339,-263.260986,94.785339,-213.260864,0.000000,"config"};
-item8[] = {"crazy__config__r",2,250,-167.227356,-263.390747,-77.227325,-213.390671,0.000000,"crazy " \n "config " \n "reading"};
-item9[] = {"system__not_needed",4,218,4.618698,-157.192429,94.618698,-107.192429,0.000000,"system" \n " not needed" \n "wtf?"};
-item10[] = {"type_1",4,218,-700.682739,112.178070,-610.682739,162.178040,0.000000,"type 1"};
-item11[] = {"type_2",4,218,-584.495544,38.783295,-494.495483,88.783295,0.000000,"type 2"};
-item12[] = {"_",2,250,-714.369141,271.314972,-624.369141,321.314972,0.000000,""};
-item13[] = {"__1",2,250,-606.549622,203.470581,-516.549622,253.470581,0.000000,""};
-item14[] = {"__2",2,250,-514.013062,138.170029,-424.012970,188.170044,0.000000,""};
-item15[] = {"true",4,218,-416.159302,284.778595,-326.159424,334.778625,0.000000,"true"};
-item16[] = {"waittime_over",4,218,-294.458679,-97.342850,-204.458679,-47.342850,0.000000,"waittime" \n "over"};
-item17[] = {"__3",2,250,-415.987061,-47.389679,-325.987061,2.610321,0.000000,""};
-item18[] = {"all_sails_done",4,218,-296.802338,-17.656738,-206.802338,32.343262,0.000000,"all" \n "sails" \n "done"};
-item19[] = {"not_done",4,218,-545.025269,-46.568604,-455.025299,3.431396,0.000000,"not done"};
-item20[] = {"__4",2,250,-705.976440,-48.568024,-615.976440,1.431976,0.000000,""};
-item21[] = {"waittime_over_1",4,218,-201.949097,46.468918,-111.949097,96.468910,0.000000,"waittime" \n "over"};
-item22[] = {"__5",2,250,-157.318634,121.817139,-67.318604,171.817139,0.000000,""};
-item23[] = {"_",4,218,-99.415512,47.649109,-9.415512,97.649109,0.000000,""};
+item6[] = {"config",4,218,4.785339,-263.260986,94.785339,-213.260864,0.000000,"config"};
+item7[] = {"crazy__config__r",2,250,-164.803619,-260.974976,-74.803589,-210.974899,0.000000,"crazy " \n "config " \n "reading"};
+item8[] = {"system__not_needed",4,218,4.618698,-157.192429,94.618698,-107.192429,0.000000,"system" \n " not needed" \n "wtf?"};
+item9[] = {"waittime_over",4,218,-294.458679,-97.342850,-204.458679,-47.342850,0.000000,"waittime" \n "over"};
+item10[] = {"_",2,250,-415.987061,-47.389679,-325.987061,2.610321,0.000000,""};
+item11[] = {"all_sails_done",4,218,-296.802338,-17.656738,-206.802338,32.343262,0.000000,"all" \n "sails" \n "done"};
+item12[] = {"waittime_over_1",4,218,-201.949097,46.468918,-111.949097,96.468910,0.000000,"waittime" \n "over"};
+item13[] = {"__1",2,250,-157.318634,121.817139,-67.318604,171.817139,0.000000,""};
+item14[] = {"_",4,218,-99.415512,47.649109,-9.415512,97.649109,0.000000,""};
+item15[] = {"crazy__config__r_1",2,250,-323.160919,-266.559509,-233.160721,-216.559448,0.000000,"crazy " \n "config " \n "reading"};
 link0[] = {0,1};
-link1[] = {0,7};
+link1[] = {0,6};
 link2[] = {1,2};
 link3[] = {3,4};
 link4[] = {4,5};
-link5[] = {4,16};
-link6[] = {4,21};
+link5[] = {4,9};
+link6[] = {4,12};
 link7[] = {5,2};
-link8[] = {6,12};
-link9[] = {7,8};
-link10[] = {8,3};
-link11[] = {8,9};
-link12[] = {9,2};
-link13[] = {10,13};
-link14[] = {11,14};
-link15[] = {12,15};
-link16[] = {13,15};
-link17[] = {14,15};
-link18[] = {15,17};
-link19[] = {16,17};
-link20[] = {17,18};
-link21[] = {17,19};
-link22[] = {18,4};
-link23[] = {19,20};
-link24[] = {20,6};
-link25[] = {20,10};
-link26[] = {20,11};
-link27[] = {21,22};
-link28[] = {22,23};
-link29[] = {23,4};
-globals[] = {0.000000,0,0,0,0,640,480,1,34,6316128,1,-432.580292,145.870636,525.092041,-240.402924,668,884,1};
-window[] = {2,-1,-1,-1,-1,889,130,1516,130,3,686};
+link8[] = {6,7};
+link9[] = {7,3};
+link10[] = {7,8};
+link11[] = {8,2};
+link12[] = {9,10};
+link13[] = {10,11};
+link14[] = {11,4};
+link15[] = {12,13};
+link16[] = {13,14};
+link17[] = {14,4};
+globals[] = {0.000000,0,0,0,0,640,480,1,36,6316128,1,-332.902191,32.995392,220.875183,-322.744049,595,884,1};
+window[] = {2,-1,-1,-1,-1,837,78,1464,78,3,613};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -88,7 +68,7 @@ class FSM
                                 /*%FSM<LINK "config">*/
                                 class config
                                 {
-                                        itemno = 7;
+                                        itemno = 6;
                                         priority = 0.000000;
                                         to="crazy__config__r";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -127,21 +107,18 @@ class FSM
                 {
                         name = "loop";
                         itemno = 4;
-                        init = /*%FSM<STATEINIT""">*/"if(_debug)then{" \n
-                         "	hintsilent _debughint;" \n
-                         "	_massIndicator attachto [_ship,getCenterOfMass _ship];" \n
-                         "	_debughint = format [""SPEED:%1km/h\nwindFrom:%2\n-----\n"",speed _ship,_windFrom];" \n
-                         "	_massIndicator hideObjectGlobal false;" \n
-                         "}else{" \n
-                         "	_massIndicator hideObjectGlobal true;" \n
+                        init = /*%FSM<STATEINIT""">*/"_sleepUnitl = time+_sleepTime;" \n
+                         "" \n
+                         "_ship setOwner 2;" \n
+                         "" \n
+                         "((crew _ship) select {_x in allplayers;}) apply {" \n
+                         "	moveOut _x; " \n
+                         "	[_x, _ship] remoteExecCall [""BW_sail_fnc_teleportToHelm"",_x];" \n
                          "};" \n
                          "" \n
                          "" \n
-                         "((crew _ship) select {_x in allplayers;}) apply {moveOut _x; _x setposasl (getposasl _ship vectoradd [0,0,4])};" \n
-                         "" \n
-                         "" \n
                          "//Rudder" \n
-                         "_factor = (_ship animationPhase ""rudder"");" \n
+                         "_factor = (_ship animationPhase ""wheel"");" \n
                          "_speed = speed _ship;" \n
                          "" \n
                          "_f2 = ((sqrt(abs _speed)/10)*10)/2;" \n
@@ -151,11 +128,45 @@ class FSM
                          "}else{" \n
                          "	_speed = _speed + _f2;" \n
                          "};" \n
-                         "_ship addTorque[0,0,_factor * _speed * sidePower];" \n
+                         "_ship addTorque[0,0,_factor * _speed * sidePower * _sidePower * (_ship getVariable [""BW_sail_sidePower"",1])];" \n
                          "" \n
                          "//Sinking" \n
                          "" \n
-                         "_newMass = _ship getVariable[""mass"",_initMass];" \n
+                         "_currentMass = _ship getVariable[""mass"",_initMass];" \n
+                         "_newMass = 0;" \n
+                         "_multiplier = _currentMass / _initMass;" \n
+                         "" \n
+                         "_holes = (_ship getVariable[""holes"",0]); " \n
+                         "" \n
+                         "_newMass = _currentMass + (waterrate * _holes * _multiplier);" \n
+                         "" \n
+                         "_newMass = _newMass min (_initmass*10);" \n
+                         "" \n
+                         "if (_ship getVariable[""track"",""false""] == ""true"") then" \n
+                         "{hintSilent format [""_currentMass: %1 _initMass: %2 _waterrate: %3 _holes: %4 _multiplier: %5"", _currentMass, _initmass, waterrate, _holes, _multiplier];};" \n
+                         "" \n
+                         "" \n
+                         "_ship setVariable[""mass"",_newMass,true];" \n
+                         "" \n
+                         "_ship setMass _newMass;" \n
+                         "" \n
+                         "if(getMass _ship < _initMass)then{" \n
+                         "	_ship setMass _initMass;" \n
+                         "	_ship setVariable[""mass"",_initMass,true];" \n
+                         "};" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "_z = (_ship modelToWorldVisualWorld (getCenterOfMass _ship))#2;" \n
+                         "" \n
+                         "if(_z < -5)then{" \n
+                         "	_ship setDamage 1;	//kill it" \n
+                         "};" \n
+                         "" \n
+                         "" \n
+                         "//Sinking old" \n
+                         "" \n
+                         "/*_newMass = _ship getVariable[""mass"",_initMass];" \n
                          "" \n
                          "_newMassHoles = 0;" \n
                          "if(_newMass > _initMass*1.5)then{" \n
@@ -175,14 +186,14 @@ class FSM
                          "if(getMass _ship < _initMass)then{" \n
                          "	_ship setMass _initMass;" \n
                          "	_ship setVariable[""mass"",_initMass,true];" \n
-                         "};" \n
+                         "};*/" \n
                          "" \n
                          "//hull wind pushing" \n
-                         "_ship addForce [wind vectorMultiply staticPower,_forwardApplyPos];" \n
+                         "_ship addForce [(wind vectorMultiply staticPower) vectoradd [0,0,0.001],_forwardApplyPos];" \n
                          "" \n
                          "//Prep for next cycle" \n
-                         "_index = -1;" \n
-                         "_sleepUnitl = time+(_sleepTime/acctime);" \n
+                         "" \n
+                         "" \n
                          "" \n
                          "_windFrom = (winddir-(direction _ship)-180);" \n
                          "_windFrom=_windFrom call BW_sail_fnc_normalizeDeg;" \n
@@ -196,9 +207,9 @@ class FSM
                                 /*%FSM<LINK "waittime_over">*/
                                 class waittime_over
                                 {
-                                        itemno = 16;
+                                        itemno = 9;
                                         priority = 0.000000;
-                                        to="__3";
+                                        to="_";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time>_sleepUnitl && {(vectorup _ship)#2 > .3} && {(getposasl _ship)#2 > -10}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -207,9 +218,9 @@ class FSM
                                 /*%FSM<LINK "waittime_over_1">*/
                                 class waittime_over_1
                                 {
-                                        itemno = 21;
+                                        itemno = 12;
                                         priority = 0.000000;
-                                        to="__5";
+                                        to="__1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"time>_sleepUnitl && {((vectorup _ship)#2 <= .3) || ((getposasl _ship)#2 <= -10)}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -233,7 +244,119 @@ class FSM
                 class crazy__config__r
                 {
                         name = "crazy__config__r";
-                        itemno = 8;
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"_sails = (_config call bis_fnc_getCfgSubclasses);" \n
+                         "" \n
+                         "_allvec = [];" \n
+                         "_allvec2 = [];" \n
+                         "_sails apply {" \n
+                         "	_allvec pushBack (""BW_vec"" createVehicle [0,0,0]);" \n
+                         "	_allvec2 pushBack (""BW_vec"" createVehicle [0,0,0]);" \n
+                         "};" \n
+                         "" \n
+                         "_massIndicator = ""BW_pos_big"" createVehicle [0,0,0];" \n
+                         "_sidePower = getNumber (_config >> ""sidePower"");"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "system__not_needed">*/
+                                class system__not_needed
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="end";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_sails isEqualTo []"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "init_done">*/
+                                class init_done
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_sails isEqualTo [])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "_">*/
+                class _
+                {
+                        name = "_";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"if(_debug)then{" \n
+                         "	_allvec apply {_x hideObjectGlobal false};" \n
+                         "	_allvec2 apply {_x hideObjectGlobal false};" \n
+                         "" \n
+                         "	_debughint = format [""SPEED:%1km/h windFrom:%2<br/>"",[speed _ship,3] call BIS_fnc_cutDecimals,[_windFrom,1] call BIS_fnc_cutDecimals];" \n
+                         "	{" \n
+                         "		_debughint = format[""%1%2"",_debughint,[_ship,_x,_allvec#_foreachindex,_allvec2#_foreachindex] call BW_sail_fnc_simulateSail];" \n
+                         "	}foreach _sails;	" \n
+                         "" \n
+                         "	_debughint = parseText (format[""<t size='%1'>"",BW_debugFontSize] + _debughint + ""</t>"");" \n
+                         "	hintsilent _debughint;" \n
+                         "" \n
+                         "	_massIndicator attachto [_ship,getCenterOfMass _ship];	" \n
+                         "	_massIndicator hideObjectGlobal false;" \n
+                         "}else{" \n
+                         "	_allvec apply {_x hideObjectGlobal true};" \n
+                         "	_allvec2 apply {_x hideObjectGlobal true};" \n
+                         "	_massIndicator hideObjectGlobal true;" \n
+                         "	_sails apply {[_ship,_x] call BW_sail_fnc_simulateSail};" \n
+                         "};" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "all_sails_done">*/
+                                class all_sails_done
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "__1">*/
+                class __1
+                {
+                        name = "__1";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"if(_ship getVariable [""holes"",0] isEqualto 0)then{" \n
+                         "	_ship setVariable [""holes"",3];" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 14;
+                                        priority = 0.000000;
+                                        to="loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "crazy__config__r_1">*/
+                class crazy__config__r_1
+                {
+                        name = "crazy__config__r_1";
+                        itemno = 15;
                         init = /*%FSM<STATEINIT""">*/"_sails = (_config call bis_fnc_getCfgSubclasses) apply {" \n
                          "" \n
                          "_s = _x;" \n
@@ -277,6 +400,9 @@ class FSM
                          "_sailCount = count _sails;" \n
                          "//I wanted to do smth smart to avoid too many config accesses. I guess I failed. I am sorry. Have fun reading the above code. You might learn smth new. Or quit Arma modding..." \n
                          "" \n
+                         "_power = getNumber (_config >> ""power"");" \n
+                         "_sidePower = getNumber (_config >> ""sidePower"");" \n
+                         "_sideForce = getNumber (_config >> ""sideForce"");" \n
                          "" \n
                          "" \n
                          "_allvec = [];" \n
@@ -291,411 +417,6 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "system__not_needed">*/
-                                class system__not_needed
-                                {
-                                        itemno = 9;
-                                        priority = 0.000000;
-                                        to="end";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_sails isEqualTo []"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "init_done">*/
-                                class init_done
-                                {
-                                        itemno = 3;
-                                        priority = 0.000000;
-                                        to="loop";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!(_sails isEqualTo [])"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "_">*/
-                class _
-                {
-                        name = "_";
-                        itemno = 12;
-                        init = /*%FSM<STATEINIT""">*/"_setAnim =       _cSail param [1, """", [""""]];" \n
-                         "_pos =           _cSail param [2, """", [""""]];" \n
-                         "_sideTurnAnim =  _cSail param [3, """", [""""]];" \n
-                         "_sideSwitchStar =_cSail param [4, """", [""""]];" \n
-                         "_sideSwitchLar = _cSail param [5, """", [""""]];" \n
-                         "_texture =       _cSail param [6, """", [""""]];" \n
-                         "" \n
-                         "_size =          _cSail param [7,  0, [0]];" \n
-                         "_turnDeg =       _cSail param [8,  0, [0]];" \n
-                         "_selection =     _cSail param [9,  0, [0]];" \n
-                         "// NOT AGAIN FUUUCK" \n
-                         "if(_ship animationPhase(_setAnim)<0.01)then{//sail is set" \n
-                         "" \n
-                         "    _moveIt = _turnDeg*(_ship animationPhase _sideTurnAnim);" \n
-                         "    _test = (_windFrom+_moveIt) call BW_sail_fnc_normalizeDeg;" \n
-                         "    if(_test<180)then{" \n
-                         "        if (_ship animationPhase _sideSwitchStar == 1)then{" \n
-                         "            _ship setObjectTextureGlobal [_selection,""""];" \n
-                         "            _ship animate[_sideSwitchLar,1,true];" \n
-                         "            _ship animate[_sideSwitchStar,0,true];" \n
-                         "        };" \n
-                         "    }else{" \n
-                         "        if (_ship animationPhase _sideSwitchLar == 1)then{" \n
-                         "            _ship setObjectTextureGlobal [_selection,""""];" \n
-                         "            _ship animate[_sideSwitchStar,1,true];" \n
-                         "            _ship animate[_sideSwitchLar,0,true];" \n
-                         "        };" \n
-                         "    };" \n
-                         "" \n
-                         "    _sideTurn = _ship animationPhase (_sideTurnAnim);" \n
-                         "	if(_sideTurn>1)then{_sideTurn=1;};" \n
-                         "	if(_sideTurn<-1)then{_sideTurn=-1;};" \n
-                         "" \n
-                         "	_sel0 = round ((_sideTurn+1)/(sail_steps#0));" \n
-                         "	_degMult = tri_sail_traverse # _sel0 # _sel;" \n
-                         "	_degMultSide = tri_sail_side # _sel0 # _sel;" \n
-                         "" \n
-                         "	_effectForward =_size * Power * (vectorMagnitude wind) * _degMult;" \n
-                         "	_effectSide = _size * sideForce * (vectorMagnitude wind) * _degMultSide;" \n
-                         "" \n
-                         "	_ship addForce [(vectordir _ship)vectorMultiply _effectForward,_forwardApplyPos];" \n
-                         "	_ship addForce [_sideForceVec vectorMultiply _effectSide,(_ship selectionPosition _pos) vectoradd [0,-5.5,0]];" \n
-                         "" \n
-                         "	_obj = _allvec#_index;" \n
-                         "	_obj2 = _allvec2#_index;" \n
-                         "" \n
-                         "	if(_debug)then{" \n
-                         "		_debughint = _debughint+format[""gaff\nsideValue:%1\nMatrixValueFront:%2\naddForceValueFront:%3\nMatrixValueSide:%4\naddForceValueSide:%5\n--------\n"",_sideTurn,_degMult,_effectForward,_degMultSide,_effectSide];" \n
-                         " 	" \n
-                         "		_obj attachto [_ship, _forwardApplyPos vectoradd [0,0,2.5+_index/4]];" \n
-                         "		_obj setVectorUp (_ship vectorWorldToModel (vectordir _ship));" \n
-                         "  		_obj animate [""length"",_effectForward/100-1,true];" \n
-                         "" \n
-                         " 	" \n
-                         "		_obj2 attachto [_ship, (_ship selectionPosition _pos) vectoradd [0,-6,0]];" \n
-                         "		_obj2 setVectorUp (_ship vectorWorldToModel _sideForceVec);" \n
-                         "  		_obj2 animate [""length"",_effectSide/100-1,true];" \n
-                         "" \n
-                         "		_obj hideObjectGlobal false;" \n
-                         "		_obj2 hideObjectGlobal false;" \n
-                         "	}else{" \n
-                         "		_obj hideObjectGlobal true;" \n
-                         "		_obj2 hideObjectGlobal true;" \n
-                         "	};" \n
-                         "}else{" \n
-                         "    _ship animate[_sideSwitchStar,1];" \n
-                         "    _ship animate[_sideSwitchLar,1];" \n
-                         "    _ship setObjectTextureGlobal [_selection,_texture];" \n
-                         "};" \n
-                         ""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "true">*/
-                                class true
-                                {
-                                        itemno = 15;
-                                        priority = 0.000000;
-                                        to="__3";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "__1">*/
-                class __1
-                {
-                        name = "__1";
-                        itemno = 13;
-                        init = /*%FSM<STATEINIT""">*/"_setAnim =       _cSail param [1, """", [""""]];" \n
-                         "_pos =           _cSail param [2, """", [""""]];" \n
-                         "" \n
-                         "_sideSwitchStar =_cSail param [3, """", [""""]];" \n
-                         "_sideSwitchLar = _cSail param [4, """", [""""]];" \n
-                         "_texture =       _cSail param [5, """", [""""]];" \n
-                         "" \n
-                         "_size =          _cSail param [6,  0, [0]];" \n
-                         "_turnDeg =       _cSail param [7,  0, [0]];" \n
-                         "_selection =     _cSail param [8,  0, [0]];" \n
-                         "// NOT AGAIN FUUUCK" \n
-                         "if(_ship animationPhase(_setAnim)<0.01)then{//sail is set" \n
-                         "" \n
-                         "    if(_windFrom<180)then{" \n
-                         "        if (_ship animationPhase _sideSwitchStar == 1)then{" \n
-                         "            _ship setObjectTextureGlobal [_selection,""""];" \n
-                         "            _ship animate[_sideSwitchLar,1,true];" \n
-                         "            _ship animate[_sideSwitchStar,0,true];" \n
-                         "        };" \n
-                         "    }else{" \n
-                         "        if (_ship animationPhase _sideSwitchLar == 1)then{" \n
-                         "            _ship setObjectTextureGlobal [_selection,""""];" \n
-                         "            _ship animate[_sideSwitchStar,1,true];" \n
-                         "            _ship animate[_sideSwitchLar,0,true];" \n
-                         "        };" \n
-                         "    };" \n
-                         "" \n
-                         "	_degMult = jib_sail_traverse#_sel;" \n
-                         "	_degMultSide = jib_sail_side#_sel;" \n
-                         "" \n
-                         "	_effectForward =_size * Power * (vectorMagnitude wind) * _degMult;" \n
-                         "	_effectSide = _size * sideForce * (vectorMagnitude wind) * _degMultSide;" \n
-                         "	" \n
-                         "	_ship addForce [((vectordir _ship)vectorMultiply _effectForward),_forwardApplyPos];" \n
-                         "	_ship addForce [(_sideForceVec vectorMultiply _effectSide),(_ship selectionPosition _pos) vectoradd [0,-2.5,0]];" \n
-                         "" \n
-                         "	_obj = _allvec#_index;" \n
-                         "	_obj2 = _allvec2#_index;" \n
-                         "" \n
-                         "	if(_debug)then{" \n
-                         "		_debughint = _debughint+format[""jib\nMatrixValueFront:%1\naddForceValueFront:%2\nMatrixValueSide:%3\naddForceValueSide:%4\n--------\n""," \n
-                         "																			_degMult,				_effectForward,			_degMultSide,	_effectSide];" \n
-                         "		_obj attachto [_ship, _forwardApplyPos vectoradd [0,0,2.5+_index/4]];" \n
-                         "		_obj setVectorUp (_ship vectorWorldToModel (vectordir _ship));" \n
-                         "   	_obj animate [""length"",_effectForward/100-1,true];" \n
-                         "" \n
-                         "		_obj2 attachto [_ship, (_ship selectionPosition _pos) vectoradd [0,-3,0]];" \n
-                         "		_obj2 setVectorUp (_ship vectorWorldToModel _sideForceVec);" \n
-                         "   	_obj2 animate [""length"",_effectSide/100-1,true];" \n
-                         "" \n
-                         "		_obj hideObjectGlobal false;" \n
-                         "		_obj2 hideObjectGlobal false;" \n
-                         "	}else{" \n
-                         "		_obj hideObjectGlobal true;" \n
-                         "		_obj2 hideObjectGlobal true;" \n
-                         "	};" \n
-                         "}else{" \n
-                         "   _ship animate[_sideSwitchStar,1];" \n
-                         "   _ship animate[_sideSwitchLar,1];" \n
-                         "   _ship setObjectTextureGlobal [_selection,_texture];" \n
-                         "};" \n
-                         ""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "true">*/
-                                class true
-                                {
-                                        itemno = 15;
-                                        priority = 0.000000;
-                                        to="__3";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "__2">*/
-                class __2
-                {
-                        name = "__2";
-                        itemno = 14;
-                        init = /*%FSM<STATEINIT""">*/"" \n
-                         "_pos =         _cSail param [1, """", [""""]];" \n
-                         "_sideTurnAnim =_cSail param [2, """", [""""]];" \n
-                         "_inflate =		_cSail param [3, """", [""""]];" \n
-                         "_noInflate = 	_cSail param [4, """", [""""]];" \n
-                         "_texture =     _cSail param [5, """", [""""]];" \n
-                         "" \n
-                         "_size =         _cSail param [6,  0, [0]];" \n
-                         "_turnDeg =      _cSail param [7,  0, [0]];" \n
-                         "_selection =    _cSail param [8,  0, [0]];" \n
-                         "_setAnimS =     _cSail param [9, [], [[]]];" \n
-                         "" \n
-                         "" \n
-                         "if({!(_ship animationPhase(_x)<0.01)} count _setAnimS isEqualTo 0)then{//sail is set" \n
-                         "	_ship setObjectTextureGlobal [_selection,""""];" \n
-                         "" \n
-                         "	_sailDeg = 180-_turnDeg*(_ship animationPhase _sideTurnAnim);" \n
-                         "	_effect = (90-abs(_windFrom-_sailDeg))/90;" \n
-                         "	if(_effect>0)then{" \n
-                         "		_ship animate[_inflate,0,true];" \n
-                         "      _ship animate[_noInflate,1,true];" \n
-                         "	}else{" \n
-                         "		_ship animate[_inflate,1,true];" \n
-                         "      _ship animate[_noInflate,0,true];" \n
-                         "	};	" \n
-                         "" \n
-                         "	_sideTurn = (_ship animationPhase (_sideTurnAnim))*-1;" \n
-                         "   if(_sideTurn>1)then{_sideTurn=1;};" \n
-                         "	if(_sideTurn<-1)then{_sideTurn=-1;};" \n
-                         "" \n
-                         "	_sel0 = round ((_sideTurn+1)/(sail_steps#0));" \n
-                         "	_degMult = quad_sail_traverse # _sel0 # _sel;" \n
-                         "	_degMultSide = quad_sail_side # _sel0 # _sel;" \n
-                         "" \n
-                         "//	[(round ((_sideTurn+1)/(sail_steps#0))),_sel,quad_sail_traverse] spawn BW_sail_fnc_printMatrix;" \n
-                         "" \n
-                         "	_effectForward =_size * Power * (vectorMagnitude wind) * _degMult;" \n
-                         "	_effectSide = _size * sideForce * (vectorMagnitude wind) * _degMultSide;" \n
-                         "" \n
-                         "	_obj = _allvec#_index;" \n
-                         "	_obj2 = _allvec2#_index;" \n
-                         "" \n
-                         "	if(_debug)then{" \n
-                         "		_debughint = _debughint+format[""quad\nsideValue:%1\nMatrixValueFront:%2\naddForceValueFront:%3\nMatrixValueSide:%4\naddForceValueSide:%5\n--------\n""," \n
-                         "															_sideTurn,				_degMult,					_effectForward,	_degMultSide,		_effectSide];" \n
-                         "" \n
-                         "		_ship addForce [((vectordir _ship)vectorMultiply _effectForward),_forwardApplyPos];" \n
-                         "		_ship addForce [(_sideForceVec vectorMultiply _effectSide),(_ship selectionPosition _pos)];" \n
-                         "	" \n
-                         "		_obj attachto [_ship, _forwardApplyPos vectoradd [0,0,2.5+_index/4]];" \n
-                         "		_obj setVectorUp (_ship vectorWorldToModel (vectordir _ship));" \n
-                         "   	_obj animate [""length"",_effectForward/100-1,true];" \n
-                         " 	" \n
-                         "		_obj2 attachto [_ship, (_ship selectionPosition _pos)];" \n
-                         "		_obj2 setVectorUp (_ship vectorWorldToModel _sideForceVec);" \n
-                         "   	_obj2 animate [""length"",_effectSide/100-1,true];" \n
-                         "" \n
-                         "		_obj hideObjectGlobal false;" \n
-                         "		_obj2 hideObjectGlobal false;" \n
-                         "	}else{" \n
-                         "		_obj hideObjectGlobal true;" \n
-                         "		_obj2 hideObjectGlobal true;" \n
-                         "	};" \n
-                         "}else{" \n
-                         "   _ship animate[_inflate,1];" \n
-                         "   _ship animate[_noInflate,1];" \n
-                         "   _ship setObjectTextureGlobal [_selection,_texture];" \n
-                         "};" \n
-                         ""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "true">*/
-                                class true
-                                {
-                                        itemno = 15;
-                                        priority = 0.000000;
-                                        to="__3";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "__3">*/
-                class __3
-                {
-                        name = "__3";
-                        itemno = 17;
-                        init = /*%FSM<STATEINIT""">*/"_index = _index+1;" \n
-                         "_lasttime = time;" \n
-                         "" \n
-                         "" \n
-                         "" \n
-                         "" \n
-                         "if(_index == 0)then{" \n
-                         "	_allvec apply {_x animate [""length"",0,true];};" \n
-                         "	_allvec2 apply {_x animate [""length"",0,true];};" \n
-                         "};"/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "not_done">*/
-                                class not_done
-                                {
-                                        itemno = 19;
-                                        priority = 0.000000;
-                                        to="__4";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(_index < _sailCount)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "all_sails_done">*/
-                                class all_sails_done
-                                {
-                                        itemno = 18;
-                                        priority = 0.000000;
-                                        to="loop";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_index>_sailCount-1"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "__4">*/
-                class __4
-                {
-                        name = "__4";
-                        itemno = 20;
-                        init = /*%FSM<STATEINIT""">*/"_cSail = _sails#_index;" \n
-                         "" \n
-                         "" \n
-                         ""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "type_1">*/
-                                class type_1
-                                {
-                                        itemno = 10;
-                                        priority = 0.000000;
-                                        to="__1";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(_cSail#0 isEqualto 1)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "type_2">*/
-                                class type_2
-                                {
-                                        itemno = 11;
-                                        priority = 0.000000;
-                                        to="__2";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(_cSail#0 isEqualto 2)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "type_0">*/
-                                class type_0
-                                {
-                                        itemno = 6;
-                                        priority = 0.000000;
-                                        to="_";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(_cSail#0 isEqualto 0)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "__5">*/
-                class __5
-                {
-                        name = "__5";
-                        itemno = 22;
-                        init = /*%FSM<STATEINIT""">*/"if(_ship getVariable [""holes"",0] isEqualto 0)then{" \n
-                         "	_ship setVariable [""holes"",3];" \n
-                         "};"/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "_">*/
-                                class _
-                                {
-                                        itemno = 23;
-                                        priority = 0.000000;
-                                        to="loop";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
                         };
                 };
                 /*%FSM</STATE>*/

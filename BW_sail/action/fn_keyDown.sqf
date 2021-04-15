@@ -33,6 +33,7 @@ switch (_key) do
 			BW_cShip animate ["wheel", _anim];
             BW_cShip animate ["drumrope", _anim];
             BW_cShip animate ["rudder", _anim];
+            BW_cShip animate ["tiller", _anim];
             true;
 		};
 	};
@@ -46,6 +47,7 @@ switch (_key) do
 			BW_cShip animate ["wheel", _anim];
             BW_cShip animate ["drumrope", _anim];
             BW_cShip animate ["rudder", _anim];
+            BW_cShip animate ["tiller", _anim];
             true;
 		};
 	};

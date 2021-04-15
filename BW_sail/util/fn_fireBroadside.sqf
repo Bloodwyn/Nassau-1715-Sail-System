@@ -21,6 +21,8 @@ private _config = (configFile >> "cfgvehicles" >> typeOf _ship >> "SailWeapons")
 			[_x, currentWeapon _x] call BIS_fnc_fire;
 			if(_reload)then{
 				[_x,[currentWeapon _x,1]] remoteExecCall ["setammo", _x];
+			}else{
+				_x setVariable ["1715_hasAmmo",false,true];
 			};
 			sleep (random .2);
 		};
